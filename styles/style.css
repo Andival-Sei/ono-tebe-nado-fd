@@ -51,8 +51,6 @@
 }
 
 .address {
-	font-style: normal;
-	text-decoration: none;
   display: flex;
   flex-direction: column;
   width: 240px;
@@ -60,8 +58,10 @@
   color: #000;
   font-weight: 400;
   font-size: 18px;
+  font-style: normal;
   line-height: 135%;
   line-height: 135%;
+  text-decoration: none;
 }
 
 .header__address {
