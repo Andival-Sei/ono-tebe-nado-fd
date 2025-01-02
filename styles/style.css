@@ -51,6 +51,8 @@
 }
 
 .address {
+	font-style: normal;
+	text-decoration: none;
   display: flex;
   flex-direction: column;
   width: 240px;
