@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 95px 50px 100px;
+  padding: 92px 50px 96px;
 }
 
 .header__links-list {
@@ -48,7 +48,7 @@
   height: 105px;
 } */
 .header__logo {
-  width: 138px;
+  width: 137px;
   height: 105px;
 }
 
