@@ -1,27 +1,29 @@
-/* Блок шапки */
+/* -----------Блок шапки-------------------------------------------------------------- */
 
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  height: 293px;
-  padding: 0 50px;
+  padding: 95px 50px 100px;
 }
 
 .header__links-list {
   display: flex;
   gap: 25px;
   color: #000;
-  /* max-width: 391.48px; */
-  /* gap: 13px;    В макете указан gap 13, и тут можно указать gap 13, а потом двигать это всё через margin и padding, но мне показалось это не удобным    */
   font-weight: 400;
   font-size: 18px;
   list-style: circle;
 }
 
 .header__links-list-item {
-  /* margin-left: 15px;
-  padding-left: 4px; */
+  margin-left: 5px;
+  padding-left: 1px;
+}
+
+.header__links-list-item:nth-child(3) {
+  margin-left: 7px;
+  padding-left: 3px;
 }
 
 .header__links-list-item_no-bullit {
@@ -41,8 +43,12 @@
   text-decoration: none;
 }
 
+/* .header__logo {
+  width: 148px; - в оригинале так, но если подгонять, то примерно так как ниже -
+  height: 105px;
+} */
 .header__logo {
-  width: 148px;
+  width: 138px;
   height: 105px;
 }
 
@@ -67,8 +73,7 @@
   justify-self: end;
 }
 
-.address__phone,
-.address__mail {
+.address__link {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -87,8 +92,7 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -109,10 +113,12 @@
 
 .aligned-text {
   display: block;
+  text-transform: uppercase;
 }
 
 .aligned-text_center {
   margin-top: 20px;
+  margin-left: 30px;
   text-align: center;
 }
 
@@ -140,12 +146,12 @@
   font-size: 22px;
   line-height: 127%;
   text-transform: uppercase;
-  word-spacing: 1.1em;
+  word-spacing: 0.85em;
 }
 
 .bet-button {
-  width: 256px;
-  height: 51px;
+  min-width: 256px;
+  min-height: 51px;
   border: 1px solid #fff;
   color: #fff;
   font-weight: 500;
@@ -173,14 +179,15 @@
 
 .lots__card-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
   margin-top: 27px;
   text-decoration: none;
   list-style: none;
 }
 
 .lots__card-list-item {
-  width: 334px;
+  max-width: 334px;
   min-height: 596px;
 }
 
@@ -191,6 +198,8 @@
   justify-content: space-between;
   height: 100%;
   padding: 48px 40px;
+  background-position: center;
+  background-size: cover;
 }
 
 .card-link {
@@ -200,20 +209,14 @@
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card__title {
@@ -253,20 +256,22 @@
 .about {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 20px;
+  gap: 25px;
   margin-top: 120px;
   margin-right: 24px;
   margin-left: 24px;
 }
 
 .about__column:first-child {
-  width: 334px;
-  margin-top: 35px;
+
+  justify-self: center;
+  width: 100%;
+  max-width: 334px;
 }
 
 .about__column:last-child {
   width: auto;
-  margin-top: 133px;
+  padding-top: 133px;
 }
 
 .about__logo {
@@ -276,6 +281,9 @@
   align-items: center; /* центрирование по вертикали */
   width: 240px;
   height: 240px;
+  margin-top: 35px;
+  margin-right: 47px;
+  margin-left: 47px;
   border-radius: 50%; /* делает элемент кругом */
   background-color: #000; /* черный цвет */
 }
@@ -286,6 +294,7 @@
 }
 
 .about__title {
+  margin-top: 3px;
   color: #000;
   font-weight: 700;
   font-size: 40px;
@@ -308,10 +317,8 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  min-height: 180px;
   margin-top: 180px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 0 50px 82px;
   list-style: none;
 }
 
